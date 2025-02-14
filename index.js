@@ -3,7 +3,7 @@ import fs from 'fs';
 import readline from 'readline';
 import cors from 'cors';
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json()); // Middleware to parse JSON data
@@ -22,6 +22,10 @@ async function readFileLines(filePath) {
     }
     return lines;
 }
+
+app.get("/",(req,res)=>{
+    res.send("Welcome to OUR-Server!!");
+});
 
 // API: Get all lines from a file
 app.get("/get-lines/:fileName", async (req, res) => {
