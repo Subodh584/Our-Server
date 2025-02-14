@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: ['https://our-client-2-0.vercel.app/', 'http://localhost:3000'],
+    origin: ['https://our-client-2-0.vercel.app', 'http://localhost:3000'],
     methods: ['GET', 'POST', 'DELETE'],
     credentials: true
   }));
