@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: ['https://rainbow-basbousa-de66ae.netlify.app/', 'http://localhost:5173'],
+    origin: ['https://your-production-domain.com', 'http://localhost:3000'],
     methods: ['GET', 'POST', 'DELETE'],
     credentials: true
   }));
