@@ -5,7 +5,11 @@ import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://67aeda85b0fb68fc96a4b9b8--rainbow-basbousa-de66ae.netlify.app/', 'http://localhost:5173'],
+    methods: ['GET', 'POST', 'DELETE'],
+    credentials: true
+  }));
 app.use(express.json()); // Middleware to parse JSON data
 
 // Function to read a file line by line
